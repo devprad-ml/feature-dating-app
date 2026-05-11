@@ -91,19 +91,6 @@ Both Echoes and Hot Take Duel can run at the same time on different ports.
 6. You see your own analysis (themes, emotion, lesson, essence) and the echoing memory below, with **shared themes highlighted in honey** on both cards
 7. Under the echo: **Yes, want to match** / **No thanks** buttons. Click one. The decision is one-shot.
 
-## The two-tab demo (mutual matching)
-
-To see the full mutual-match flow, open the app in **two browser windows** (one normal, one incognito so they're treated as different users). Each tab will end up showing the other's memory as the echo, and when **both** click "Yes, want to match," a green **Mutual Echo** banner appears.
-
-Concrete walkthrough:
-
-1. **Tab 1** (`alice`): write a memory with strong values like loyalty, restraint, or self-trust. Submit. URL becomes `?memory_id=…`.
-2. **Tab 2** (`bob`): write a memory with **overlapping themes** (that's how the matching works). If alice wrote about loyalty, bob writes about something like trust or honesty. Submit.
-3. Bob's echo will be alice's memory (highest theme overlap). Bob clicks **Yes, want to match**.
-4. Alice's tab is polling every 2 seconds. As soon as bob's reaction lands, alice sees the partner has reacted and her UI shows a waiting state if she hasn't decided, or the **Mutual Echo** banner if she already said yes.
-5. Tab refresh works at any time. The URL `?memory_id=…` lets either tab reload the current state.
-
-If one tab clicks "No thanks," that tab gets a "you passed" message and the other tab gets "this one didn't unlock." Same neutral copy regardless of who said no first.
 
 ## API surface
 
