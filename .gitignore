@@ -1,0 +1,33 @@
+# Private docs (not for the repo)
+LEARN.md
+WALKTHROUGH.md
+
+# Generated artifacts
+echoes_deck*.pptx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+*.db
+
+# Node
+node_modules/
+dist/
+.vite/
+*.local
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+</content>

@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir c:\\\\feature-dating-app 2>nul || echo \"Directory does not exist or is empty\")",
+      "PowerShell(if \\(-not \\(Test-Path \"c:\\\\feature-dating-app\"\\)\\) { New-Item -Path \"c:\\\\feature-dating-app\" -ItemType Directory } ; Get-ChildItem \"c:\\\\feature-dating-app\")",
+      "PowerShell($dirs = @\\(\"c:\\\\feature-dating-app\\\\backend\",\"c:\\\\feature-dating-app\\\\backend\\\\app\",\"c:\\\\feature-dating-app\\\\backend\\\\app\\\\routers\",\"c:\\\\feature-dating-app\\\\backend\\\\uploads\",\"c:\\\\feature-dating-app\\\\frontend\",\"c:\\\\feature-dating-app\\\\frontend\\\\src\",\"c:\\\\feature-dating-app\\\\frontend\\\\src\\\\steps\",\"c:\\\\feature-dating-app\\\\frontend\\\\src\\\\hooks\",\"c:\\\\feature-dating-app\\\\frontend\\\\src\\\\components\"\\) ; foreach \\($d in $dirs\\) { if \\(-not \\(Test-Path $d\\)\\) { New-Item -Path $d -ItemType Directory | Out-Null } } ; Write-Output \"ok\")",
+      "PowerShell(Get-ChildItem -Recurse -File \"c:\\\\feature-dating-app\" | Where-Object { $_.FullName -notmatch '\\\\.claude' } | ForEach-Object { $_.FullName.Replace\\('C:\\\\feature-dating-app\\\\',''\\) })",
+      "PowerShell(python --version)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell($files = @\\('backend\\\\app\\\\models.py','backend\\\\app\\\\schemas.py','backend\\\\app\\\\routers\\\\duel.py'\\) ; foreach \\($f in $files\\) { python -c \"import py_compile; py_compile.compile\\(r'c:\\\\feature-dating-app\\\\$f', doraise=True\\); print\\('ok', r'$f'\\)\" } ; Get-ChildItem -Recurse -Directory \"c:\\\\feature-dating-app\" -Filter \"__pycache__\" | Remove-Item -Recurse -Force)",
+      "PowerShell($files = @\\('backend\\\\app\\\\prompts.py','backend\\\\app\\\\llm.py','backend\\\\app\\\\schemas.py','backend\\\\app\\\\routers\\\\topics.py'\\) ; foreach \\($f in $files\\) { python -c \"import py_compile; py_compile.compile\\(r'c:\\\\feature-dating-app\\\\$f', doraise=True\\); print\\('ok', r'$f'\\)\" } ; Get-ChildItem -Recurse -Directory \"c:\\\\feature-dating-app\" -Filter \"__pycache__\" | Remove-Item -Recurse -Force)",
+      "PowerShell($dirs = @\\(\"c:\\\\feature-dating-app\\\\new-feature\",\"c:\\\\feature-dating-app\\\\new-feature\\\\backend\",\"c:\\\\feature-dating-app\\\\new-feature\\\\backend\\\\app\",\"c:\\\\feature-dating-app\\\\new-feature\\\\backend\\\\app\\\\routers\",\"c:\\\\feature-dating-app\\\\new-feature\\\\frontend\",\"c:\\\\feature-dating-app\\\\new-feature\\\\frontend\\\\src\",\"c:\\\\feature-dating-app\\\\new-feature\\\\frontend\\\\src\\\\pages\"\\) ; foreach \\($d in $dirs\\) { if \\(-not \\(Test-Path $d\\)\\) { New-Item -Path $d -ItemType Directory | Out-Null } } ; Write-Output \"ok\")",
+      "PowerShell($files = @\\('backend\\\\app\\\\config.py','backend\\\\app\\\\database.py','backend\\\\app\\\\models.py','backend\\\\app\\\\schemas.py','backend\\\\app\\\\prompts.py','backend\\\\app\\\\llm.py','backend\\\\app\\\\main.py','backend\\\\app\\\\routers\\\\memories.py','backend\\\\seed.py'\\) ; foreach \\($f in $files\\) { python -c \"import py_compile; py_compile.compile\\(r'c:\\\\feature-dating-app\\\\new-feature\\\\$f', doraise=True\\); print\\('ok', r'$f'\\)\" } ; Get-ChildItem -Recurse -Directory \"c:\\\\feature-dating-app\\\\new-feature\" -Filter \"__pycache__\" | Remove-Item -Recurse -Force)",
+      "PowerShell($files = @\\('backend\\\\app\\\\models.py','backend\\\\app\\\\schemas.py','backend\\\\app\\\\routers\\\\memories.py','backend\\\\app\\\\main.py','backend\\\\seed.py'\\) ; foreach \\($f in $files\\) { python -c \"import py_compile; py_compile.compile\\(r'c:\\\\feature-dating-app\\\\new-feature\\\\$f', doraise=True\\); print\\('ok', r'$f'\\)\" } ; Get-ChildItem -Recurse -Directory \"c:\\\\feature-dating-app\\\\new-feature\" -Filter \"__pycache__\" | Remove-Item -Recurse -Force)",
+      "Bash(c:/feature-dating-app/new-feature/backend/.venv/Scripts/pip.exe install *)",
+      "Bash(c:/feature-dating-app/new-feature/backend/.venv/Scripts/python.exe c:/feature-dating-app/new-feature/make_deck.py)"
+    ],
+    "additionalDirectories": [
+      "c:\\feature-dating-app"
+    ]
+  }
+}
